@@ -10,7 +10,8 @@
 body,h1,h2{font-family: "Raleway", sans-serif,
   font-weight:800}
 body, html {height: 100%}
-p {line-height: 2}
+p {line-height: 4,
+  font-weight:800}
 .bgimg, .bgimg2 {
   min-height: 100%;
   background-position: center;
@@ -43,8 +44,8 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "T  " + hours + "H  "
-  + minutes + "MIN  " + seconds + "SEC  ";
+  document.getElementById("demo").innerHTML = days + "D " + hours + "H "
+  + minutes + "MIN " + seconds + "SEC ";
     
   // If the count down is over, write some text 
   if (distance < 0) {
@@ -58,7 +59,7 @@ var x = setInterval(function() {
 <header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
   <div class="w3-display-middle w3-text-black w3-center">
     <h1 class="w3-jumbo">COMING SOON</h1>
-    <h2>Nadine & Kiwi are getting married</h2>
+    <h2>We are getting married!</h2>
     <h2><b><p id="demo"></p></b></h2>
   </div>
 </header>
