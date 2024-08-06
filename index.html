@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
-body,h1,h2{font-family: "Courier New", Courier, monospace}
+body,h1,h2{font-family: "Raleway", sans-serif}
 body, html {height: 100%}
 p {line-height: 2}
 .bgimg, .bgimg2 {
@@ -42,8 +42,8 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  document.getElementById("demo").innerHTML = days + "T  " + hours + "H  "
+  + minutes + "MIN  " + seconds + "SEC  ";
     
   // If the count down is over, write some text 
   if (distance < 0) {
