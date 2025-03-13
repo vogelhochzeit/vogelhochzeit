@@ -71,6 +71,25 @@
       scroll-margin-top: 80px; /* Enough offset for fixed navbar */
     }
 
+    /* MEDIA QUERY for smaller screens */
+@media (max-width: 576px) {
+  /* Slightly reduce brand text so it doesn't overflow or crowd toggler */
+  .navbar-brand {
+    font-size: 1.4rem;
+    white-space: nowrap; /* keep brand on one line */
+  }
+
+  /* Make nav links a bit smaller */
+  #mainNav a {
+    font-size: 1rem;
+  }
+
+  /* Optional: add padding to nav links if you want more clickable area
+  .navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+  }
+  */
+}
     /********************************************
      * HERO (HEADER) SECTION
      ********************************************/
