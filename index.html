@@ -146,44 +146,64 @@
       display: none;   /* English hidden by default */
     }
 
-    /********************************************
-     * COUNTDOWN SECTION
-     ********************************************/
-    #countdown {
-      padding: 3rem 0;
-      background-color: #ffffff;
-    }
-    .countdown-box {
-      display: flex;
-      justify-content: center;
-      gap: 3rem;
-      margin-top: 2rem;
-    }
-    .countdown-item {
-      text-align: center;
-      font-weight: 700;
-      animation: zoomIn 0.6s ease;
-    }
-    .countdown-number {
-      font-size: 3rem;
-      margin-bottom: 0.25rem;
-      color: #83BE96;
-    }
-    .countdown-label {
-      text-transform: uppercase;
-      font-size: 1rem;
-      color: #555;
-    }
-    @keyframes zoomIn {
-      0% {
-        transform: scale(0.8);
-        opacity: 0;
-      }
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
+/********************************************
+ * COUNTDOWN SECTION
+ ********************************************/
+#countdown {
+  padding: 3rem 0;
+  background-color: #ffffff;
+}
+
+.countdown-box {
+  display: flex;
+  /* NEW: allow items to wrap onto a new line */
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 3rem;        /* large gap on bigger screens */
+  margin-top: 2rem;
+}
+
+.countdown-item {
+  text-align: center;
+  font-weight: 700;
+  animation: zoomIn 0.6s ease;
+}
+
+.countdown-number {
+  font-size: 3rem;
+  margin-bottom: 0.25rem;
+  color: #83BE96;
+}
+
+.countdown-label {
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #555;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* MEDIA QUERY for smaller devices */
+@media (max-width: 576px) {
+  .countdown-box {
+    gap: 1.5rem;  /* reduce gap so it doesn’t overflow horizontally */
+  }
+  .countdown-number {
+    font-size: 2.4rem; /* slightly shrink the countdown digits */
+  }
+  .countdown-label {
+    font-size: 0.9rem;
+  }
+}
 
     /********************************************
      * RSVP BAR SECTION
